@@ -1,0 +1,14 @@
+{
+  //Indent rainbow..
+  "indentRainbow.indicatorStyle": "light",
+  "indentRainbow.lightIndicatorStyleLineWidth": 1.5,
+  "indentRainbow.colors": [
+    "#3a1eff70",
+    "#f0ff3270",
+    "rgba(255,20,64,0.4)",
+    "rgba(127,255,127,0.4)",
+    "rgba(255,127,255,0.4)",
+    "rgba(79,236,236,0.4)",
+    "rgba(150,150,250,0.5)"
+  ]
+}

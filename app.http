@@ -1,0 +1,10 @@
+# *Registering user sample
+
+POST http://localhost:3004/register
+Content-Type: application/json
+
+{
+	"username" : "ksd",
+	"password": "siva123"
+}
+###
