@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "ea38fa00-3442-4b06-b3aa-3b2e5d330979",
+		"name": "EpiMax_API",
+		"description": "A sample for all the API's that were created in the file.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34631917"
+	},
+	"item": [
+		{
+			"name": "Registering a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\" : \"raj123\",\r\n\t\"password\": \"raj@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3004/register"
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"raj123\",\r\n    \"password\": \"raj@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3004/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a task",
+			"request": {
+				"auth": {
+					"type": "inherit",
+					"inherit": {}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  :\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhajEyMyIsImlhdCI6MTcxNDUzOTk4N30.8EpHWeXCmbBvqBdrjQWlDJDqldn-hArMtDIVrErIl00rs\"",
+						"type": "text",
+						"id": 0,
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Sample\",\r\n    \"description\": \"checking the functioning of api\",\r\n    \"status\": \"active\",\r\n    \"createdAt\": \"1-05-2024\",\r\n    \"updatedAt\": \"1-05-2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3004/task"
+			},
+			"response": []
+		},
+		{
+			"name": "API to get all the tasks",
+			"request": {
+				"auth": {
+					"type": "inherit",
+					"inherit": {}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"id": 8,
+						"disabled": true
+					}
+				],
+				"url": "http://localhost:3004/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "API to GET a specific task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3004/tasks/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Updating a specific task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "inherit",
+					"inherit": {}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"new Sample\",\r\n    \"description\": \"new description\",\r\n    \"status\": \"active\",\r\n    \"updatedAt\":\"02-05-2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3004/tasks/1"
+			},
+			"response": []
+		},
+		{
+			"name": "API to delete a specific task",
+			"request": {
+				"auth": {
+					"type": "inherit",
+					"inherit": {}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3004/tasks/2"
+			},
+			"response": []
+		}
+	]
+}
